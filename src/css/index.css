@@ -1,0 +1,265 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  letter-spacing: 0.15px;
+}
+
+:root {
+  --main-color: linear-gradient(90deg, #B01EB3 1.2%, #2D2A98 98.99%);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#root {
+  padding: 0 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+nav {
+  max-width: 1080px;
+  width: 100%;
+  height: 95px;
+  border-radius: 30px;
+  background-image: var(--main-color);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+  box-shadow: 0px 20px 50px 20px rgba(151, 32, 174, 0.1);
+}
+
+nav h1 {
+  text-align: center;
+}
+main {
+  max-width: 1080px;
+  width: 100%;
+  margin: 120px 0 40px 0;
+  display: flex;
+  justify-content: center;
+  min-height: 431px;
+}
+
+main > div:first-child, main > div:last-child {
+  flex-grow: 1;
+  flex-basis: 0%;
+}
+
+
+main > div:last-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.wordsTable {
+  border: 1px solid #cbcbcb;
+  border-radius: 100px;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+.wordsTable td, .wordsTable th {
+  padding: 10px 25px;
+}
+
+thead {
+  padding: 10px;
+  border-bottom: 2px solid #000;
+}
+
+.wordsTable th {
+  background-color: #fff;
+  text-align: left;
+}
+
+.wordsTable td {
+  border-bottom: 1px solid #cbcbcb;
+}
+
+.pagination {
+  max-width: 1080px;
+  width: 100%;
+  margin-bottom: 120px;
+  height: 50px;
+}
+.pagination button {
+  margin-right: 10px;
+  margin-bottom: 10px;
+  padding: revert;
+  border: none;
+  background-color: transparent;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.pagination button:hover {
+  font-weight: bold;
+  transform: scale(1.4);
+  transition: 100ms;
+  transition-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+.pagination button:active {
+  
+}
+
+.pagination .activePaginationButton {
+  border-bottom: 4px solid rgb(93 24 220);
+  font-weight: bold;
+}
+
+.categoryOptions {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+}
+
+.categoryOptions button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  border: 0;
+  background-color: white;
+  box-shadow: rgb(0 0 0 / 20%) 0 0 8px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-size: 15px;
+  transition: all .5s ease;
+  cursor: pointer;
+ }
+ 
+ .categoryOptions button:hover {
+  letter-spacing: 3px;
+  box-shadow: rgb(93 24 220) 0px 7px 29px 0px;
+}
+
+.categoryOptions button:active {
+  letter-spacing: 3px;
+  box-shadow: rgb(93 24 220) 0px 7px 29px 0px;
+  transform: translateY(10px);
+  transition: 80ms;
+  transition-delay: 300ms;
+}
+
+.categoryOptions .currentButton {
+  width: 80px;
+  height: 80px;
+  border-radius: 30px;
+  background-image: var(--main-color);
+  color: hsl(0, 0%, 100%);
+  box-shadow: rgb(93 24 220) 0px 0px 0px 0px;
+}
+
+.categoryOptions li {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.categoryOptions li > div:first-child {
+  width: 80px;
+  display: flex;
+  justify-content: center;
+  margin-right: 10px;
+}
+
+.search {
+  display: flex;
+}
+
+.search img {
+  width: 20px;
+}
+
+.search input {
+  height: 49px;
+  width: 320px;
+  border: 1px solid #cbcbcb;
+  color: #808080;
+  border-radius: 40px 0 0 40px;
+  padding: 12px 28px 12px 28px;
+  font-size: 18px;
+}
+
+.search button {
+  border: 1px solid #cbcbcb;
+  border-radius: 0 40px 40px 0;
+  border-left: none;
+  background-color: white;
+  height: 49px;
+  width: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.search button:active {
+  background-color: rgb(163, 163, 163);
+}
+
+footer {
+  color: rgb(93 24 220);
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+footer a:hover {
+  background-color: rgb(93 24 220);
+}
+footer span {
+  color: #000;
+  font-weight: bold;
+}
+
+footer img {
+  width: 50px;
+}
+
+
+
+
+@media (max-width: 920px) {
+  .wordsTable {
+    width: 100%;
+  }
+
+  main {
+    flex-direction: column;
+  }
+  
+  main > div:first-child {
+    overflow-x: auto;
+    order: 2;
+  }
+  
+  main > div:last-child {
+    order: 1;
+    margin-bottom: 80px;
+  }
+  
+}
+@media (max-width: 340px) {
+  .search input {
+    max-width: 320px;
+    width: 80%;
+    font-size: 16px;
+  }
+  
+}
