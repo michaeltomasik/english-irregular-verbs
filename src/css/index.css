@@ -1,3 +1,10 @@
+
+/* 1. Please split this code to seperate files so the file where the css applies to is in the same parent folder
+   2. Try to avoid using global selectors, make additional class
+   3. Avoid using ids too, use classes instead
+   4. Change to scss
+   5. Keep the colors in variables like you did with --main-color
+*/
 * {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;

@@ -1,4 +1,6 @@
 
+// Keep filenames camelcase like wordsProcess.js
+
 
 export class Categorize {
     constructor (words) {
@@ -6,7 +8,10 @@ export class Categorize {
     }
     get allDifferent() {
         return this.words.filter((each) => {
-            if (each.Infinitive !== each.SimplePast && each.Infinitive !== each.PastParticiple && each.SimplePast !== each.PastParticiple) {
+            // It is more readable this way, apply to the rest
+            if (each.Infinitive !== each.SimplePast
+                && each.Infinitive !== each.PastParticiple
+                && each.SimplePast !== each.PastParticiple) {
                 return each
             }
         })

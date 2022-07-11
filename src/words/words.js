@@ -1,3 +1,13 @@
+// I would rethink the structure of storing those words
+// For example If you would like to find the word "write" and its forms it would have to go through whole array to find it
+// I would use dictionary like {
+//    write: {
+//      "Infinitive": "write",
+//      "SimplePast": "wrote",
+//      "PastParticiple": "written",
+//       "Μετάφραση": "γράφω"
+// }
+// }
 export const words = [
     {
         "Infinitive": "abide",
